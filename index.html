@@ -151,7 +151,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       <div><b data-n="3">3</b><span>vaccines into Saudi national programmes and society recommendations</span></div>
       <div><b data-n="15">15</b><span>years across Pfizer, Roche and Novartis</span></div>
       <div><b data-n="4">4</b><span>product launches in three years</span></div>
-      <div><b data-n="4">4</b><span>peer-reviewed papers and congress posters since 2024</span></div>
+      <div><b data-n="6">6</b><span>peer-reviewed papers and congress posters since 2024</span></div>
     </div>
   </div>
 </header>
@@ -213,7 +213,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
             <g font-size="14" font-weight="600"><text x="216" y="40" fill="#4f6378">No intervention</text><text x="245" y="100" fill="#1fae8a">Maternal + infant</text><text x="40" y="192" fill="#4f6378" font-weight="400">RSV season</text></g>
           </svg>
         </div>
-        <div class="bd"><h3>RSV prevention budget impact</h3><p>Modelled maternal RSVpreF vaccination with targeted nirsevimab against nirsevimab alone for Saudi infants. Presented at ESPID 2025.</p><div class="chips"><span class="chip">Health economics</span><span class="chip">RSV</span><span class="chip">Infants</span></div></div>
+        <div class="bd"><h3>RSV prevention budget impact</h3><p>Modelled maternal RSVpreF vaccination with targeted nirsevimab against nirsevimab alone for Saudi infants. Published in Infectious Diseases and Therapy, 2026.</p><div class="chips"><span class="chip">Health economics</span><span class="chip">RSV</span><span class="chip">Infants</span></div></div>
       </article>
 
 
@@ -396,9 +396,11 @@ document.getElementById('jobs').innerHTML=jobs.map(j=>`<article class="job${j.no
 
 /* Publications */
 const pubs=[
+  {k:"Journal",d:"Infectious Diseases and Therapy · 2026",t:"Budget impact of strategies involving RSVpreF and nirsevimab to protect infants in Saudi Arabia against respiratory syncytial virus",s:"Both strategies cut the RSV burden in Saudi infants; adding maternal RSVpreF vaccination gave a considerably lower budget impact than nirsevimab alone, even at low uptake. First presented at ESPID 2025.",u:"https://doi.org/10.1007/s40121-026-01386-5"},
+  {k:"Poster",d:"World Congress of the World Society for Pediatric Infectious Diseases (WSPID) · 2025",t:"Cost effectiveness of PCV20 compared with lower-valent PCVs in the Saudi paediatric routine immunisation programme",s:"Assesses the public health and economic impact of moving the Saudi childhood programme to PCV20, including the cost of delaying the switch.",u:""},
   {k:"Journal",d:"Expert Review of Vaccines · 2025",t:"Modeling the potential public health and economic impact of different COVID-19 vaccination strategies with an adapted vaccine in the Kingdom of Saudi Arabia",s:"A decision tree–Markov model by age and risk shows that widening booster coverage beyond high-risk groups would cut infections, hospitalisations and deaths while saving costs.",u:"https://doi.org/10.1080/14760584.2024.2438757"},
-  {k:"Poster",d:"ESPID 2025, Bucharest · Poster #2110",t:"Budget impact of strategies for prevention of RSV among infants in Saudi Arabia",s:"Compares nirsevimab alone with maternal RSVpreF vaccination plus targeted nirsevimab; the combined strategy reduces cases and overall costs.",u:""},
   {k:"Journal",d:"Travel Medicine and Infectious Disease · 2024",t:"Narrative review of factors associated with SARS-CoV-2 coinfection in Middle Eastern countries and the need to vaccinate against preventable diseases",s:"Links coinfection risk to underlying infections, low routine vaccination and stretched health systems, and makes the case for stronger routine immunisation.",u:"https://doi.org/10.1016/j.tmaid.2024.102792"},
+  {k:"Journal",d:"Frontiers in Pediatrics · 2024",t:"RSV burden in children under 2 years old in understudied areas worldwide: gap analysis of available evidence, 2012–2022",s:"Maps paediatric RSV evidence across 149 countries in six WHO regions and finds data too uneven to estimate burden in many, calling for country-level epidemiology to guide RSV prevention.",u:"https://doi.org/10.3389/fped.2024.1452267"},
   {k:"Journal",d:"Frontiers in Medicine · 2024",t:"Adult RSV disease burden: systematic literature review in Africa, Asia, Latin America, and the Middle East, 2012–2022",s:"Pulls together hospitalisation and mortality data, shows marked under-reporting, and calls for stronger adult RSV surveillance.",u:"https://doi.org/10.3389/fmed.2024.1375005"}
 ];
 document.getElementById('pubs').innerHTML=pubs.map(p=>`<article class="pub rv in"><div class="meta"><span class="tag${p.k==='Poster'?' poster':''}">${esc(p.k)}</span><span>${esc(p.d)}</span></div><h3>${esc(p.t)}</h3><p>${esc(p.s)}</p>${p.u?`<a class="go" href="${esc(p.u)}" rel="noopener">Read the paper ↗</a>`:`<span class="go" style="color:var(--mute)">Congress poster</span>`}</article>`).join('');
