@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostafa Mousa, MPH</title>
+<meta name="description" content="Mostafa Mousa — Vaccines Marketing Lead, Pfizer Saudi Arabia. Pharmacist, LSHTM MPH, AI-augmented Medical Affairs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a senior Medical Affairs leader's public profile, calm, light and exact
+   IDEA an immunisation programme chart: evidence flowing into policy, one career drawn at true time scale
+   PICTURE live diagram of five disciplines (Medical Affairs, marketing, AI, public health, pharmacy) feeding vaccine impact; animated figures on each piece of work
+   COLOUR white ground, navy ink #0a2540, sky #2f9be0, signal pink #e0346a, mint #1fae8a
+   TYPE Hanken Grotesk 300 very large for the name, Hanken Grotesk 400-600 for text
+   LAYOUT laptop: name left, live diagram right, figures below; phone: name, diagram, figures, sections stacked */
+:root{color-scheme:light;--bg:#ffffff;--ink:#0a2540;--mute:#4f6378;--line:#dfe8f0;--panel:#f2f7fb;--sky:#2f9be0;--skyl:#d8ecfa;--pink:#e0346a;--mint:#1fae8a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Hanken Grotesk",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow-x:clip}
+a{color:inherit}
+img,svg{max-width:100%}
+.band{padding-block:clamp(36px,5vw,72px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:#fff;padding:8px 12px;z-index:10}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;padding:12px max(5vw,16px)}
+nav .me{font-weight:600;margin-right:auto;text-decoration:none}
+nav a.l{text-decoration:none;color:var(--mute);font-size:15px;padding:6px 0}
+nav a.l:hover,nav a.l:focus-visible{color:var(--sky)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.hero{background:linear-gradient(180deg,#eef6fc 0%,#ffffff 100%)}
+.hero .wrap.top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+h1{font-weight:300;font-size:clamp(44px,7vw,88px);line-height:1;letter-spacing:-.03em;margin:0 0 14px;text-wrap:balance}
+.role{font-size:clamp(18px,2vw,22px);color:var(--sky);margin:0 0 18px;font-weight:600}
+.lede{font-size:17px;color:var(--mute);max-width:58ch;margin:0 0 24px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #b9cfe2;text-decoration:none;font-weight:600;font-size:15px;background:#fff;transition:border-color .2s,transform .2s}
+.btn.p{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn:hover{border-color:var(--sky);transform:translateY(-1px)}
+.hfig svg{display:block;width:100%;height:auto}
+.hfig text,.mini text{font-family:"Hanken Grotesk",system-ui,sans-serif}
+.figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:clamp(28px,4vw,48px)}
+.figs div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.figs b{display:block;font-size:clamp(32px,4vw,46px);font-weight:300;line-height:1.1;font-variant-numeric:tabular-nums}
+.figs div:first-child b{color:var(--pink)}
+.figs span{font-size:14px;color:var(--mute)}
+h2{font-size:clamp(30px,4vw,44px);font-weight:400;letter-spacing:-.02em;line-height:1.1;margin:0 0 8px;text-wrap:balance}
+.sub{color:var(--mute);margin:0 0 28px;max-width:70ch}
+.sub a{color:var(--sky);font-weight:600}
+.tl{position:relative;padding-top:52px}
+.tl .row{margin:0 0 12px}
+.tl .co{display:block;font-size:13.5px;color:var(--mute);font-weight:600;margin-bottom:4px}
+.tl .track{position:relative;height:34px;background:var(--panel);border-radius:6px}
+.tl .seg{position:absolute;top:0;bottom:0;border-radius:6px;display:flex;align-items:center;padding:0 8px;font-size:13px;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.tl .seg.cur{color:#fff;background:linear-gradient(90deg,#d4820f 0%,#d4820f 55%,rgba(212,130,15,.15) 100%)!important}
+.tl.on .seg{transform:scaleX(1)}
+.tl .ticks{position:relative;height:20px;font-size:13px;color:var(--mute);margin-top:2px}
+.tl .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.tl .ticks .nw{color:#d4820f;font-weight:700}
+.tl .now{position:absolute;top:44px;bottom:26px;width:2px;background:#d4820f;transform:translateX(-1px)}
+.tl .now::after{content:"";position:absolute;left:-5px;top:-6px;width:12px;height:12px;border-radius:50%;background:#d4820f;animation:ping 2s infinite}
+.tl .pill{position:absolute;top:0;transform:translateX(-100%);margin-left:14px;background:#fff;border:1px solid #f0d3a6;color:var(--ink);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;white-space:nowrap;box-shadow:0 4px 12px rgba(10,37,64,.06)}
+.tl .pill b{color:#d4820f}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(212,130,15,.5)}100%{box-shadow:0 0 0 14px rgba(212,130,15,0)}}
+.alt{background:var(--panel)}
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.proj{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.proj:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(10,37,64,.08)}
+.mini{background:linear-gradient(180deg,#f7fbfe,#eaf4fb);border-bottom:1px solid var(--line)}
+.mini svg{display:block;width:100%;height:auto}
+.proj .bd{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.proj h3{margin:0 0 6px;font-size:18px;font-weight:600;line-height:1.3}
+.proj p{margin:0 0 12px;color:var(--mute);font-size:15px}
+.chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--skyl);color:var(--ink)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.about p{margin:0 0 14px;max-width:62ch}
+.pill{display:inline-block;font-size:13px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);margin:0 6px 6px 0;color:var(--mute);background:#fff}
+.wins{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.wins li{padding:14px 16px;border-left:3px solid var(--pink);background:var(--panel);border-radius:0 8px 8px 0}
+.wins b{display:block}
+.job{display:grid;grid-template-columns:11em minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0}
+.job .when{font-size:15px;color:var(--mute);font-variant-numeric:tabular-nums}
+.job .when b{display:block;color:var(--ink);font-weight:600;font-size:16px}
+.job h3{margin:0 0 4px;font-size:20px;font-weight:600;line-height:1.25}
+.job .org{color:var(--mute);margin:0 0 10px;font-size:15px}
+.job ul{margin:0;padding-left:1.1em}.job li{margin:4px 0;max-width:75ch}
+.job.now h3::after{content:"Current";margin-left:10px;font-size:12px;font-weight:600;vertical-align:3px;padding:2px 8px;border-radius:999px;background:var(--pink);color:#fff}
+.pubs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pub{border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;background:#fff}
+.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--mute);margin-bottom:8px}
+.tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--skyl)}
+.tag.poster{background:#fbdde7}
+.pub h3{margin:0 0 8px;font-size:18px;line-height:1.3;font-weight:600}
+.pub p{margin:0 0 14px;color:var(--mute);font-size:15px}
+.pub .go{margin-top:auto;font-weight:600;text-decoration:none;color:var(--pink);font-size:15px}
+.pub a.go:hover{text-decoration:underline}
+.ai{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{padding:20px;border-top:2px solid var(--sky);background:#fff;border-radius:0 0 10px 10px}
+.card h3{margin:0 0 6px;font-size:17px;font-weight:600}
+.card p{margin:0;font-size:15px;color:var(--mute)}
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.edu .card{border-top-color:var(--pink);background:var(--panel)}
+.edu .yr{font-size:14px;color:var(--mute);margin-bottom:6px}
+.contact{background:linear-gradient(180deg,#ffffff,#eef6fc)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:end}
+.contact p{color:var(--mute);margin:0}
+.contact .cta{justify-content:flex-end}
+.note{font-size:13px;margin-top:14px}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero .wrap.top,.about,.contact .wrap{grid-template-columns:minmax(0,1fr)}.ai,.edu,.work{grid-template-columns:repeat(2,minmax(0,1fr))}.figs{grid-template-columns:repeat(2,minmax(0,1fr))}.contact .cta{justify-content:flex-start}}
+@media(max-width:600px){.pubs,.ai,.edu,.work{grid-template-columns:minmax(0,1fr)}.job{grid-template-columns:minmax(0,1fr);gap:6px}.tl .pill{font-size:13px;padding:5px 12px}nav a.l{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.tl .seg{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Main"><div class="wrap">
+  <a class="me" href="#top">Mostafa Mousa, MPH</a>
+  <a class="l" href="#work">Work</a>
+  <a class="l" href="#about">About</a>
+  <a class="l" href="#experience">Experience</a>
+  <a class="l" href="#publications">Publications</a>
+  <a class="l" href="#education">Education</a>
+  <a class="l" href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero band" id="top">
+  <div class="wrap top">
+    <div>
+      <h1>Mostafa Mousa, MPH</h1>
+      <p class="role">Vaccines Marketing Lead · Pfizer Saudi Arabia</p>
+      <p class="lede">Pharmacist and public health specialist with 15 years in Saudi Arabia and the Middle East. I lead the marketing of Pfizer's vaccines in the Kingdom, turn local evidence into national immunisation policy, and build AI into how my teams work.</p>
+      <div class="cta">
+        <a class="btn p" href="#work">See my work</a>
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hfig" role="img" aria-label="Animated diagram: Medical Affairs, marketing, AI, public health and pharmacy each feed a steady flow into vaccine impact at the centre">
+      <svg viewBox="0 0 540 530" id="hero-svg"></svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="figs">
+      <div><b data-n="3">3</b><span>vaccines into Saudi national programmes and society recommendations</span></div>
+      <div><b data-n="15">15</b><span>years across Pfizer, Roche and Novartis</span></div>
+      <div><b data-n="4">4</b><span>product launches in three years</span></div>
+      <div><b data-n="4">4</b><span>peer-reviewed papers and congress posters since 2024</span></div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="band" aria-labelledby="career-h">
+  <div class="wrap">
+    <h2 id="career-h">Career at a glance</h2>
+    <p class="sub">Commercial roots, then medical science, now marketing leadership: 15 years in the region, drawn to scale.</p>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<section class="band alt" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h">Selected work</h2>
+    <p class="sub">The programmes I am proudest of, each shown as the mechanism behind it.</p>
+    <div class="work">
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="Three vaccine vials, Prevenar 20, Comirnaty and Nimenrix, fill in turn">
+          <svg viewBox="0 0 400 200" id="vials"></svg>
+        </div>
+        <div class="bd"><h3>Vaccines brand leadership</h3><p>Brand strategy for Prevenar 20, Comirnaty and Nimenrix: one plan that links evidence, market access, field teams and national campaigns.</p><div class="chips"><span class="chip">Marketing</span><span class="chip">Brand strategy</span><span class="chip">Market access</span></div></div>
+      </article>
+
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="A token moves from evidence through modelling and the advisory committee to the national programme">
+          <svg viewBox="0 0 400 200">
+            <line x1="50" y1="110" x2="340" y2="110" stroke="#b9cfe2" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="110" x2="340" y2="110" stroke="#2f9be0" stroke-width="4" stroke-linecap="round" stroke-dasharray="290" stroke-dashoffset="290"><animate attributeName="stroke-dashoffset" values="290;0;0" keyTimes="0;.8;1" dur="5s" repeatCount="indefinite"/></line>
+            <g font-size="14" text-anchor="middle" fill="#0a2540" font-weight="600">
+              <circle cx="50" cy="110" r="14" fill="#fff" stroke="#2f9be0" stroke-width="3"/><text x="50" y="150">Evidence</text>
+              <circle cx="147" cy="110" r="14" fill="#fff" stroke="#2f9be0" stroke-width="3"/><text x="147" y="150">Modelling</text>
+              <circle cx="243" cy="110" r="14" fill="#fff" stroke="#2f9be0" stroke-width="3"/><text x="243" y="150">NITAG</text>
+              <circle cx="340" cy="110" r="18" fill="#e0346a"><animate attributeName="r" values="16;20;16" dur="1.2s" repeatCount="indefinite"/></circle><text x="340" y="150">Programme</text>
+            </g>
+            <circle r="8" fill="#0a2540" cy="110"><animate attributeName="cx" values="50;340;340" keyTimes="0;.8;1" dur="5s" repeatCount="indefinite"/></circle>
+            <text x="200" y="58" text-anchor="middle" font-size="15" fill="#4f6378">RSV · COVID-19 · PCV20</text>
+          </svg>
+        </div>
+        <div class="bd"><h3>From evidence to national recommendation</h3><p>End-to-end medical strategy that brought RSV, COVID-19 and pneumococcal vaccines into Saudi programmes and society recommendations for at-risk adults and Hajj pilgrims.</p><div class="chips"><span class="chip">Policy</span><span class="chip">NITAG</span><span class="chip">Vaccines</span></div></div>
+      </article>
+
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="Animated DNA double helix representing genome-based pneumococcal surveillance">
+          <svg viewBox="0 0 400 200" id="helix"></svg>
+        </div>
+        <div class="bd"><h3>Genomic pneumococcal surveillance</h3><p>Pioneered whole-genome-sequencing-based pneumococcal surveillance in Saudi Arabia, alongside real-world studies on IPD, RSV, MenB and long COVID.</p><div class="chips"><span class="chip">WGS</span><span class="chip">Real-world evidence</span><span class="chip">IPD</span></div></div>
+      </article>
+
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="Two curves: RSV cases without intervention, and a lower curve with maternal vaccination plus targeted nirsevimab">
+          <svg viewBox="0 0 400 200">
+            <line x1="40" y1="170" x2="370" y2="170" stroke="#b9cfe2" stroke-width="2"/>
+            <path d="M40 160 C 110 150, 150 40, 205 40 S 300 150, 370 160" fill="none" stroke="#b9cfe2" stroke-width="3" stroke-dasharray="6 6"/>
+            <path d="M40 166 C 110 162, 150 110, 205 108 S 300 160, 370 166" fill="#1fae8a" fill-opacity=".15" stroke="#1fae8a" stroke-width="4" stroke-dasharray="420" stroke-dashoffset="420"><animate attributeName="stroke-dashoffset" values="420;0;0" keyTimes="0;.6;1" dur="5s" repeatCount="indefinite"/></path>
+            <path d="M205 46 L205 102" stroke="#e0346a" stroke-width="2.5"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.55;.65;1" dur="5s" repeatCount="indefinite"/></path>
+            <path d="M199 94 L205 104 L211 94" fill="none" stroke="#e0346a" stroke-width="2.5"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.55;.65;1" dur="5s" repeatCount="indefinite"/></path>
+            <g font-size="14" font-weight="600"><text x="216" y="40" fill="#4f6378">No intervention</text><text x="245" y="100" fill="#1fae8a">Maternal + infant</text><text x="40" y="192" fill="#4f6378" font-weight="400">RSV season</text></g>
+          </svg>
+        </div>
+        <div class="bd"><h3>RSV prevention budget impact</h3><p>Modelled maternal RSVpreF vaccination with targeted nirsevimab against nirsevimab alone for Saudi infants. Presented at ESPID 2025.</p><div class="chips"><span class="chip">Health economics</span><span class="chip">RSV</span><span class="chip">Infants</span></div></div>
+      </article>
+
+
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="Network of nodes with signals travelling between them, representing AI agents in Medical Affairs">
+          <svg viewBox="0 0 400 200" id="net"></svg>
+        </div>
+        <div class="bd"><h3>AI-augmented Medical Affairs</h3><p>Compliance-endorsed AI agents for planning and governance, AI-driven insight synthesis recognised across Pfizer's emerging markets, and team-wide AI adoption.</p><div class="chips"><span class="chip">Claude</span><span class="chip">Copilot</span><span class="chip">Agents</span></div></div>
+      </article>
+
+      <article class="proj rv">
+        <div class="mini" role="img" aria-label="People icons filling in as a vaccination programme transitions to a broader vaccine">
+          <svg viewBox="0 0 400 200" id="people"></svg>
+        </div>
+        <div class="bd"><h3>Prevenar 20 national programme transition</h3><p>Leading the marketing of the national immunisation programme transition to Prevenar 20, widening pneumococcal protection for Saudi children.</p><div class="chips"><span class="chip">Prevenar 20</span><span class="chip">NIP</span><span class="chip">Current</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about" aria-labelledby="about-h">
+  <div class="wrap about">
+    <div>
+      <h2 id="about-h">From evidence to national policy</h2>
+      <p>I lead vaccines marketing for Pfizer Saudi Arabia across Prevenar 20, Comirnaty and Nimenrix, including the national programme transition to Prevenar 20. Before that I spent four years leading Medical Affairs for the primary care portfolio, so my brand strategy starts from the evidence and from what decision-makers need to see.</p>
+      <p>My work sits where three disciplines meet. Pharmacy gives me the science of the product. Public health, from my MPH at the London School of Hygiene &amp; Tropical Medicine, gives me population thinking and behaviour change. AI lets a small team produce evidence, insight and plans at a scale that used to need a much larger one.</p>
+      <div><span class="pill">Vaccines marketing</span><span class="pill">Brand strategy</span><span class="pill">Prevenar 20</span><span class="pill">Comirnaty</span><span class="pill">Nimenrix</span><span class="pill">Anti-infectives</span><span class="pill">NITAG engagement</span><span class="pill">Health economics</span><span class="pill">Real-world evidence</span><span class="pill">Health promotion</span><span class="pill">Oncology</span><span class="pill">Haematology</span><span class="pill">Ophthalmology</span><span class="pill">Immunology</span></div>
+    </div>
+    <ul class="wins">
+      <li><b>Local evidence for decision-makers</b>Burden-of-disease and vaccine impact modelling, plus five research activities on RSV and COVID-19 in Saudi Arabia and the region.</li>
+      <li><b>Safety study lead</b>Study Lead for a post-authorisation safety study of the Pfizer-BioNTech COVID-19 vaccine in the Saudi population.</li>
+      <li><b>Four launches in three years</b>Widening access to innovative vaccines and anti-infectives.</li>
+      <li><b>Top-performing medical team</b>Recognised by Pfizer MERA in 2022, and across Pfizer's international markets for actionable insights.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band alt" id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <h2 id="exp-h">Experience</h2>
+    <p class="sub">Eight roles across sales, medical and marketing, four therapy-area shifts, one thread: getting the right medicine to the right patient in this region.</p>
+    <div id="jobs"></div>
+  </div>
+</section>
+
+<section class="band" id="publications" aria-labelledby="pub-h">
+  <div class="wrap">
+    <h2 id="pub-h">Publications</h2>
+    <p class="sub">Regional evidence on RSV, COVID-19 and vaccine-preventable disease, built to inform policy in Saudi Arabia and emerging markets. Full list on <a href="https://scholar.google.com/citations?user=yHeLO8wAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>.</p>
+    <div class="pubs" id="pubs"></div>
+  </div>
+</section>
+
+<section class="band alt" id="ai" aria-labelledby="ai-h">
+  <div class="wrap">
+    <h2 id="ai-h">AI in Medical Affairs</h2>
+    <p class="sub">An early adopter inside a regulated environment: Claude and Microsoft Copilot embedded in daily work, within internal governance.</p>
+    <div class="ai" id="aiCards"></div>
+  </div>
+</section>
+
+<section class="band" id="education" aria-labelledby="edu-h">
+  <div class="wrap">
+    <h2 id="edu-h">Education</h2>
+    <p class="sub">Clinical science first, then immunology and genetics, then population health.</p>
+    <div class="edu" id="edu"></div>
+  </div>
+</section>
+</main>
+
+<section class="contact band" id="contact" aria-labelledby="c-h">
+  <div class="wrap">
+    <div>
+      <h2 id="c-h">Let's talk vaccines, evidence or AI</h2>
+      <p>Based in Riyadh. Open to conversations on immunisation policy, vaccines marketing, Medical Affairs leadership and AI in pharma. The best way to reach me is a message on LinkedIn.</p>
+    </div>
+    <div class="cta">
+      <a class="btn p" href="https://www.linkedin.com/in/mostafa-mousa-mph-2b171640a/" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=yHeLO8wAAAAJ&amp;hl=en" rel="noopener">Google Scholar ↗</a>
+    </div>
+  </div>
+</section>
+<footer class="band" style="padding-block:20px"><div class="wrap"><span>© 2026 Mostafa Mousa</span><span>Views are my own and do not represent my employer.</span></div></footer>
+
+<script>
+{
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const NS="http://www.w3.org/2000/svg";
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Hero: five disciplines feeding vaccine impact */
+{
+const hs=document.getElementById('hero-svg'),CX=270,CY=272,R=182,NR=54,CR=62;
+const F=[["Medical","Affairs","evidence to policy","#2459c9"],["Marketing","","brand strategy","#d4820f"],["AI","","Claude · Copilot","#11977c"],["Public","health","LSHTM MPH","#cf2f66"],["Pharmacy","","product science","#2f9be0"]];
+const P=F.map((f,i)=>{const a=(-90+i*72)*Math.PI/180;return{x:CX+R*Math.cos(a),y:CY+R*Math.sin(a),a}});
+let o=`<defs><radialGradient id="hc" cx=".5" cy=".4"><stop offset="0" stop-color="#16406b"/><stop offset="1" stop-color="#0a2540"/></radialGradient><filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0a2540" flood-opacity=".10"/></filter></defs>`;
+o+=`<circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="#cfdeeb" stroke-width="1"/>`;
+o+=`<circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="#2f9be0" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="1 14" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 ${CX} ${CY}" to="360 ${CX} ${CY}" dur="60s" repeatCount="indefinite"/></circle>`;
+o+=`<circle cx="${CX}" cy="${CY}" r="${R*0.55}" fill="none" stroke="#e3ecf4" stroke-width="1"/>`;
+P.forEach((p,i)=>{const c=F[i][3],x1=CX+(R-NR)*Math.cos(p.a),y1=CY+(R-NR)*Math.sin(p.a),x2=CX+CR*Math.cos(p.a),y2=CY+CR*Math.sin(p.a);
+  o+=`<path id="ln${i}" d="M${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)}" stroke="${c}" stroke-opacity=".35" stroke-width="1.5" fill="none"/>`;
+  [0,1].forEach(k=>{const b=(i*0.4+k*1.2).toFixed(2);o+=`<circle r="4.5" fill="${c}" opacity="0"><animateMotion dur="2.4s" begin="${b}s" repeatCount="indefinite"><mpath href="#ln${i}"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.75;1" dur="2.4s" begin="${b}s" repeatCount="indefinite"/></circle>`});
+});
+P.forEach((p,i)=>{const [t1,t2,sub,c]=F[i],b=(i*0.8).toFixed(1);
+  o+=`<g><circle cx="${p.x}" cy="${p.y}" r="${NR}" fill="none" stroke="${c}" stroke-width="1.5" opacity="0"><animate attributeName="r" values="${NR};${NR+14}" dur="4s" begin="${b}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;0" dur="4s" begin="${b}s" repeatCount="indefinite"/></circle>`;
+  o+=`<circle cx="${p.x}" cy="${p.y}" r="${NR}" fill="#fff" stroke="${c}" stroke-width="2.5" filter="url(#sh)"/><circle cx="${p.x}" cy="${p.y}" r="${NR-8}" fill="${c}" fill-opacity=".08"/>`;
+  const ty=t2?p.y-3:p.y+6;
+  o+=`<text x="${p.x}" y="${ty}" text-anchor="middle" font-size="16.5" font-weight="700" fill="#0a2540">${t1}</text>`+(t2?`<text x="${p.x}" y="${p.y+17}" text-anchor="middle" font-size="16.5" font-weight="700" fill="#0a2540">${t2}</text>`:'');
+  o+=`<text x="${p.x}" y="${i===0?p.y-NR-12:p.y+NR+20}" text-anchor="middle" font-size="13.5" fill="${c}" font-weight="600">${sub}</text></g>`;
+});
+o+=`<circle cx="${CX}" cy="${CY}" r="${CR}" fill="#0a2540" opacity=".12"><animate attributeName="r" values="${CR};${CR+22}" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".16;0" dur="3s" repeatCount="indefinite"/></circle>`;
+o+=`<circle cx="${CX}" cy="${CY}" r="${CR}" fill="url(#hc)" filter="url(#sh)"/><circle cx="${CX}" cy="${CY}" r="${CR-7}" fill="none" stroke="#8fd3ff" stroke-opacity=".35" stroke-width="1"/>`;
+o+=`<text x="${CX}" y="${CY-3}" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Vaccine</text><text x="${CX}" y="${CY+18}" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">impact</text>`;
+hs.innerHTML=o;
+}
+
+/* Career band */
+const START=2012,END=2027.6,NOW=2026.9;
+const lanes=[
+  {co:"Pfizer Saudi Arabia",c:"#bfe2fb",segs:[[2014,2016,"Immunology rep","Immun."],[2021,2022,"Medical manager","Med. mgr"],[2022,2026.6,"Primary Care Medical Lead","Medical Lead"],[2026.6,END,"","",1]]},
+  {co:"Roche Saudi Arabia",c:"#c3f0e2",segs:[[2016,2018,"Oncology","Onc."],[2018,2020,"MSL · haematology","MSL"],[2020,2021,"Ophthalmology","Oph."]]},
+  {co:"Novartis Egypt",c:"#d9ccff",segs:[[2012,2014,"Medical rep · cardiovascular","Cardio"]]},
+  {co:"Education",c:"#fbd0dd",segs:[[2020,2020.5,"Harvard",""],[2022,2025,"MPH · LSHTM","MPH"]]}
+];
+const pct=y=>(y-START)/(END-START)*100;
+const shade=(c,i)=>i%2?`color-mix(in srgb,${c} 70%,#ffffff)`:c;
+let tl=`<div class="pill" style="left:${pct(NOW).toFixed(2)}%">Now: <b>Vaccines Marketing Lead</b>, Pfizer</div>`;
+tl+=lanes.map((l,li)=>`<div class="row"><span class="co">${esc(l.co)}</span><div class="track">${l.segs.map((s,i)=>`<div class="seg${s[4]?' cur':''}" title="${esc(s[2]||'Vaccines Marketing Lead')}" data-long="${esc(s[2])}" data-short="${esc(s[3])}" style="left:${pct(s[0]).toFixed(2)}%;width:calc(${(Math.min(pct(s[1]),100)-pct(s[0])).toFixed(2)}% - 2px);background:${shade(l.c,i)};transition-delay:${(li*0.15+i*0.2).toFixed(2)}s">${esc(s[2])}</div>`).join('')}</div></div>`).join('');
+tl+=`<div class="ticks">${[2012,2014,2016,2018,2020,2022,2024].map(t=>`<span style="left:${pct(t).toFixed(2)}%">${t}</span>`).join('')}<span class="nw" style="left:${pct(NOW).toFixed(2)}%">Now</span></div><span class="now" style="left:${pct(NOW).toFixed(2)}%"></span>`;
+const tlEl=document.getElementById('tl');tlEl.innerHTML=tl;
+const fit=()=>tlEl.querySelectorAll('.seg').forEach(g=>{g.textContent=g.dataset.long;const w=g.getBoundingClientRect().width||g.offsetWidth;if(g.scrollWidth>g.clientWidth+1){g.textContent=g.dataset.short;if(g.scrollWidth>g.clientWidth+1)g.textContent=''}});
+const tro=new ResizeObserver(fit);tro.observe(tlEl);fit();
+
+/* Helix */
+const hx=document.getElementById('helix');
+let h='';const N=16;
+for(let i=0;i<N;i++){const x=40+i*20,ph=i*0.55,dur=3;
+  h+=`<line x1="${x}" x2="${x}" stroke="#b9cfe2" stroke-width="2"><animate attributeName="y1" values="${[0,1,2,3,4].map(k=>(100+50*Math.sin(ph+k*Math.PI/2)).toFixed(1)).join(';')}" dur="${dur}s" repeatCount="indefinite"/><animate attributeName="y2" values="${[0,1,2,3,4].map(k=>(100-50*Math.sin(ph+k*Math.PI/2)).toFixed(1)).join(';')}" dur="${dur}s" repeatCount="indefinite"/></line>`;
+  h+=`<circle cx="${x}" r="6" fill="#2f9be0"><animate attributeName="cy" values="${[0,1,2,3,4].map(k=>(100+50*Math.sin(ph+k*Math.PI/2)).toFixed(1)).join(';')}" dur="${dur}s" repeatCount="indefinite"/></circle>`;
+  h+=`<circle cx="${x}" r="6" fill="${i%5===2?'#e0346a':'#1fae8a'}"><animate attributeName="cy" values="${[0,1,2,3,4].map(k=>(100-50*Math.sin(ph+k*Math.PI/2)).toFixed(1)).join(';')}" dur="${dur}s" repeatCount="indefinite"/></circle>`;}
+hx.innerHTML=h;
+
+/* Vials */
+const vi=[["Prevenar 20","#2f9be0"],["Comirnaty","#e0346a"],["Nimenrix","#1fae8a"]];
+document.getElementById('vials').innerHTML=vi.map(([n,c],i)=>{const x=85+i*115,d=(i*0.6).toFixed(1);return `<clipPath id="vc${i}"><rect x="${x-24}" y="48" width="48" height="104" rx="10"/></clipPath><rect x="${x-14}" y="30" width="28" height="18" rx="3" fill="#0a2540"/><rect x="${x-24}" y="48" width="48" height="104" rx="10" fill="#fff" stroke="#b9cfe2" stroke-width="2"/><g clip-path="url(#vc${i})"><rect x="${x-24}" width="48" fill="${c}" fill-opacity=".85" y="152" height="104"><animate attributeName="y" values="152;64;64;152" keyTimes="0;.35;.9;1" dur="6s" begin="${d}s" repeatCount="indefinite"/></rect></g><path d="M${x-12} 66 L${x-12} 138" stroke="#fff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/><text x="${x}" y="182" text-anchor="middle" font-size="15" font-weight="600" fill="#0a2540">${n}</text>`}).join('');
+
+/* Network */
+const nodes=[[70,60],[70,140],[170,100],[260,50],[260,150],[340,100]];
+const edges=[[0,2],[1,2],[2,3],[2,4],[3,5],[4,5],[3,4]];
+document.getElementById('net').innerHTML=edges.map(([a,b])=>`<line x1="${nodes[a][0]}" y1="${nodes[a][1]}" x2="${nodes[b][0]}" y2="${nodes[b][1]}" stroke="#b9cfe2" stroke-width="2"/>`).join('')+
+ edges.map(([a,b],i)=>`<circle r="5" fill="#e0346a"><animate attributeName="cx" values="${nodes[a][0]};${nodes[b][0]}" dur="1.8s" begin="${(i*0.35).toFixed(2)}s" repeatCount="indefinite"/><animate attributeName="cy" values="${nodes[a][1]};${nodes[b][1]}" dur="1.8s" begin="${(i*0.35).toFixed(2)}s" repeatCount="indefinite"/></circle>`).join('')+
+ nodes.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${i===2?18:13}" fill="${i===2?'#0a2540':'#fff'}" stroke="#2f9be0" stroke-width="3"><animate attributeName="stroke-width" values="3;6;3" dur="2s" begin="${i*0.3}s" repeatCount="indefinite"/></circle>`).join('')+
+ `<text x="170" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">AI</text>`;
+
+/* People filling */
+let pp='';const cols=10,rows=3;
+for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const x=38+c*36,y=40+r*50,d=((r*cols+c)*0.08).toFixed(2);
+  pp+=`<g transform="translate(${x} ${y})"><circle cx="0" cy="0" r="7" fill="#b9cfe2"><animate attributeName="fill" values="#b9cfe2;#2f9be0;#2f9be0;#b9cfe2" keyTimes="0;.15;.9;1" dur="6s" begin="${d}s" repeatCount="indefinite"/></circle><path d="M-11 26 Q-11 10 0 10 Q11 10 11 26 Z" fill="#b9cfe2"><animate attributeName="fill" values="#b9cfe2;#2f9be0;#2f9be0;#b9cfe2" keyTimes="0;.15;.9;1" dur="6s" begin="${d}s" repeatCount="indefinite"/></path></g>`;}
+document.getElementById('people').innerHTML=pp;
+
+if(reduced)document.querySelectorAll('svg').forEach(s=>{try{s.pauseAnimations();s.setCurrentTime(2)}catch(e){}});
+
+/* Count-up figures, timeline grow and card reveal */
+const count=el=>{const n=+el.dataset.n;if(reduced){el.textContent=n;return}let t0=null;const step=t=>{t0??=t;const k=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*(1-(1-k)**3));if(k<1)requestAnimationFrame(step)};el.textContent='0';requestAnimationFrame(step)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;if(t.dataset.n)count(t);else if(t.classList.contains('tl'))t.classList.add('on');else t.classList.add('in');io.unobserve(t)}),{threshold:.2});
+document.querySelectorAll('[data-n],.tl,.rv').forEach(el=>io.observe(el));
+
+/* Experience */
+const jobs=[
+  {w:"2026 – now",y:"Riyadh",t:"Vaccines Marketing Lead",o:"Pfizer Saudi Arabia",now:1,b:["Leads brand strategy and marketing for Pfizer's vaccines portfolio in Saudi Arabia: Prevenar 20 (pneumococcal), Comirnaty (COVID-19) and Nimenrix (meningococcal ACWY).","Leads the commercial side of the national immunisation programme transition to Prevenar 20, working with health authorities and institutional channels.","Shapes seasonal COVID-19 vaccine planning with Comirnaty, aligned with national campaigns and at-risk groups.","Builds adult vaccination programmes for high-risk patients through targeted specialist and healthcare-professional engagement.","Positions Nimenrix for meningococcal protection, including travel and mass-gathering settings such as Hajj and Umrah.","Brings medical evidence, market access and field teams into one brand plan, using AI for insight, planning and content."]},
+  {w:"2022 – 2026",y:"Riyadh",t:"Primary Care Medical Lead",o:"Pfizer Saudi Arabia",b:["Led Medical Affairs for vaccines and anti-infectives (COVID-19, pneumococcal disease, influenza, RSV) with a team of three MSLs and two medical managers.","Drove the inclusion of RSV, COVID-19 and pneumococcal vaccines into Saudi immunisation programmes and national society recommendations for at-risk adults and Hajj pilgrims.","Launched four new products in three years.","Designed real-world and non-interventional studies on RSV, IPD, MenB and long COVID, including WGS-based pneumococcal surveillance.","Study Lead for a post-authorisation safety study of the COVID-19 vaccine in Saudi Arabia."]},
+  {w:"2021 – 2022",y:"Riyadh",t:"Medical Manager, Vaccines",o:"Pfizer Saudi Arabia",b:["Owned medical strategy for the pneumococcal and meningococcal vaccine portfolio.","Led a peer-reviewed manuscript on PCV in patients with diabetes (2022) and advisory boards on the clinical and economic value of PCV20."]},
+  {w:"2020 – 2021",y:"Jeddah",t:"Associate Medical Manager, Ophthalmology",o:"Roche Saudi Arabia",b:["Led medical launch readiness for faricimab and the ranibizumab Port Delivery System.","Regional lead for early market assessment across Saudi Arabia, the Gulf and Iraq."]},
+  {w:"2018 – 2019",y:"Jeddah",t:"Medical Science Liaison, Haematology",o:"Roche Saudi Arabia",b:["Launched and positioned emicizumab, running 20+ medical activities that engaged over 90% of Saudi haematology experts.","Led an advisory board towards national consensus on emicizumab laboratory testing and championed the haemophilia patient support programme."]},
+  {w:"2016 – 2018",y:"Dammam",t:"Product Specialist, Oncology",o:"Roche Saudi Arabia",b:["HER2 breast cancer portfolio in the Eastern Province. Top performer for the Kadcyla launch in 2017."]},
+  {w:"2014 – 2016",y:"Jeddah, Abha",t:"Medical Representative, Immunology",o:"Pfizer Saudi Arabia",b:["Best Achiever for Enbrel in 2015, at 113% of annual target."]},
+  {w:"2012 – 2014",y:"Egypt",t:"Medical Representative, Cardiovascular",o:"Novartis Egypt",b:["Valsartan range across hypertension, heart failure and post-MI care."]}
+];
+document.getElementById('jobs').innerHTML=jobs.map(j=>`<article class="job${j.now?' now':''}"><div class="when"><b>${esc(j.w)}</b>${esc(j.y)}</div><div><h3>${esc(j.t)}</h3><p class="org">${esc(j.o)}</p><ul>${j.b.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></article>`).join('');
+
+/* Publications */
+const pubs=[
+  {k:"Journal",d:"Expert Review of Vaccines · 2025",t:"Modeling the potential public health and economic impact of different COVID-19 vaccination strategies with an adapted vaccine in the Kingdom of Saudi Arabia",s:"A decision tree–Markov model by age and risk shows that widening booster coverage beyond high-risk groups would cut infections, hospitalisations and deaths while saving costs.",u:"https://doi.org/10.1080/14760584.2024.2438757"},
+  {k:"Poster",d:"ESPID 2025, Bucharest · Poster #2110",t:"Budget impact of strategies for prevention of RSV among infants in Saudi Arabia",s:"Compares nirsevimab alone with maternal RSVpreF vaccination plus targeted nirsevimab; the combined strategy reduces cases and overall costs.",u:""},
+  {k:"Journal",d:"Travel Medicine and Infectious Disease · 2024",t:"Narrative review of factors associated with SARS-CoV-2 coinfection in Middle Eastern countries and the need to vaccinate against preventable diseases",s:"Links coinfection risk to underlying infections, low routine vaccination and stretched health systems, and makes the case for stronger routine immunisation.",u:"https://doi.org/10.1016/j.tmaid.2024.102792"},
+  {k:"Journal",d:"Frontiers in Medicine · 2024",t:"Adult RSV disease burden: systematic literature review in Africa, Asia, Latin America, and the Middle East, 2012–2022",s:"Pulls together hospitalisation and mortality data, shows marked under-reporting, and calls for stronger adult RSV surveillance.",u:"https://doi.org/10.3389/fmed.2024.1375005"}
+];
+document.getElementById('pubs').innerHTML=pubs.map(p=>`<article class="pub rv in"><div class="meta"><span class="tag${p.k==='Poster'?' poster':''}">${esc(p.k)}</span><span>${esc(p.d)}</span></div><h3>${esc(p.t)}</h3><p>${esc(p.s)}</p>${p.u?`<a class="go" href="${esc(p.u)}" rel="noopener">Read the paper ↗</a>`:`<span class="go" style="color:var(--mute)">Congress poster</span>`}</article>`).join('');
+
+/* AI */
+const ai=[
+  ["Strategic intelligence","Scenario planning and market disruption analysis for emerging markets, built on AI-augmented research."],
+  ["Governed AI agents","Compliance-endorsed agents on Microsoft Copilot for planning and governance tasks, taken from concept to working prototype."],
+  ["Insight generation","Synthesis of multi-source field insights into tactical plans, recognised as best practice across Pfizer's emerging markets."],
+  ["Scientific content","Faster publication outlines, advisory board materials and omnichannel plans, with scientific accuracy and review compliance kept."],
+  ["Team enablement","Coaching colleagues on practical AI adoption to build a culture of AI-augmented Medical Affairs."],
+  ["Agentic frameworks","Exploring Claude's agentic capabilities and context engineering to build reusable instruction sets for Medical Affairs."]
+];
+document.getElementById('aiCards').innerHTML=ai.map(a=>`<div class="card"><h3>${esc(a[0])}</h3><p>${esc(a[1])}</p></div>`).join('');
+
+/* Education */
+const edu=[
+  ["2022 – 2025","MSc Public Health (MPH)","London School of Hygiene & Tropical Medicine. Health promotion stream: behavioural science, health communication, programme planning and evaluation."],
+  ["2020","Certificate in Genetics and Immunology","Harvard Medical School. Postgraduate certificate of achievement covering immune function, genomics and precision medicine."],
+  ["2005 – 2010","BSc Pharmacy","Tanta University. Pharmacology, pharmaceutics, medicinal chemistry and clinical pharmacy."]
+];
+document.getElementById('edu').innerHTML=edu.map(e=>`<div class="card"><div class="yr">${esc(e[0])}</div><h3>${esc(e[1])}</h3><p>${esc(e[2])}</p></div>`).join('');
+}
+</script>
+</body>
+</html>
